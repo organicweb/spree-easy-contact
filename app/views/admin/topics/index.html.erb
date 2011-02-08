@@ -1,0 +1,39 @@
+<div class="toolbar">
+  <ul class="actions">
+    <li id="new_topic_link">
+      <%= button_link_to t("new_topic"), new_object_url, {:remote => true, :icon => "add"} %>
+    </li>
+  </ul>
+  <br class="clear" />
+</div>
+<h1><%= t("topics") %></h1>
+
+<div id="new_topic"></div>
+
+<table class="index">
+  <tr>
+    <%= hook :admin_topic_index_header do %>
+    <th><%= t("name") %></th>
+    <th><%= t("email") %></th>
+    <% end %>
+    <th>
+      <%= hook :admin_topic_index_header_actions %>
+    </th>
+  </tr>
+  <% @topics.each do |topic| %>
+  <tr id="dom_id topic">
+    <%- locals = {:topic => topic} %>
+    <%= hook :admin_topics_index_rows, locals do %>
+    <td><%= topic.name %></td>
+    <td><%= topic.email %></td>
+    <% end %>
+    <td class="actions">
+      <%= hook :admin_topics_index_rows_actions, locals do %>
+      <%= link_to_edit topic %>
+      &nbsp;
+      <%= link_to_delete topic %>
+      <% end %>
+    </td>
+  </tr>
+  <% end %>
+</table>
