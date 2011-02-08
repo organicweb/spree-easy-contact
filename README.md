@@ -24,7 +24,7 @@ rake db:migrate
 Set properly the mail method in the admin area (/admin/mail_methods)
 
 And you're done !
-
+=================
 
 
 Copyright (c) 2011 [Mathias Standaert for Organic Web], released under the New BSD License
