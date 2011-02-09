@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_easy_contact'
-  s.version     = '1.0.1'
+  s.version     = '1.0.2'
   s.summary     = 'Add gem summary here'
   #s.description = 'Add (optional) gem description here'
   s.required_ruby_version = '>= 1.8.7'
@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.authors           = ['Mathias Standaert']
   s.date              = %q(2011-02-08)
   s.email             = 'contact@organicweb.fr'
-  s.homepage          = %q{https://github.com/organicweb/spree-easy-contact.git}
+  s.homepage          = %q{https://github.com/organicweb/spree-easy-contact}
 
   s.files        = Dir['CHANGELOG', 'README.md', 'LICENSE', 'lib/**/*', 'app/**/*', 'public/**/*', 'db/**/*', 'config/**/*']
   s.require_path = 'lib'
