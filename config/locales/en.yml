@@ -18,3 +18,4 @@ en:
   topics_description: "Setup topics for the contact form, choose wich email should be routed to"
   new_topic: Add a topic
   from: from
+  message_from: Message from
