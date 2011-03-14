@@ -1,4 +1,4 @@
-<h1><%= t("contacts")%> de <%= @contact.name %></h1>
+<h1><%= "#{t('contacts')} #{t('from')} #{@contact.name}" %></h1>
 
 <%= render :partial => 'admin/shared/contact_tabs', :locals => {:current => "Contact Details"} %>
 
@@ -13,7 +13,7 @@
 <div class="adr">
   <h4><%= t("topic") %></h4>
   <p>
-    Ici le sujet
+    <%= @contact.topic.name %>
   </p>
 </div>
 <% if @contact.order_number %>
