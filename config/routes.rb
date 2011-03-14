@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  # Add your extension routes here
+  match '/contact-us' => 'contacts#new', :as => :contact
   
   resources :contacts, :controller => 'contacts'
   
