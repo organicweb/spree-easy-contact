@@ -1,7 +1,7 @@
 SpreeEasyContact
 ================
 
-Easy to implement contact form with honyepot-captcha, with a topic selection management in admin.
+Easy to implement contact form with honeypot-captcha, with a topic selection management in admin.
 It stores all messages in DB for an easy recall of messages.
 
 This extension is based on joshnuss spree-contact-form (thank you BTW) : https://github.com/joshnuss/spree-contact-form
