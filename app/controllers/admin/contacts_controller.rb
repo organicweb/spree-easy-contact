@@ -1,6 +1,6 @@
 class Admin::ContactsController < Admin::BaseController
   def index
-    @contacts = Contacts.all
+    @contacts = Contact.all
   end
 
   def show
