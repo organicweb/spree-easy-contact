@@ -1,4 +1,9 @@
 class Admin::ContactsController < Admin::BaseController
-  resource_controller
-  
+  def index
+    @contacts = Contacts.all
+  end
+
+  def show
+    @contact = Contact.find(params[:id])
+  end
 end
