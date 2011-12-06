@@ -17,9 +17,7 @@ Then run all the following command :
 
 bundle install
 
-rake spree_easy_contact:install
-
-rake db:migrate
+rails g spree_easy_contact:install
 
 Set properly the mail method in the admin area (/admin/mail_methods)
 
