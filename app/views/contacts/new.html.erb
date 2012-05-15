@@ -1,7 +1,7 @@
 <% @body_id = 'contact_us' %>
 <div id="contact-us">
   <h1><%= t("contact_us") %></h1>
-  <%= render "shared/error_messages", :target => @contact %>
+  <%= render "spree/shared/error_messages", :target => @contact %>
   <%= form_for(@contact, :html => {:honeypot => true}) do |f| %>
     <div class="field">
        <%= f.label :topic_id, t("topic") %>
