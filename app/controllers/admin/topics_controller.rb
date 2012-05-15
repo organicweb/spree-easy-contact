@@ -1,4 +1,4 @@
-class Admin::TopicsController < Admin::BaseController
+class Admin::TopicsController < Spree::Admin::BaseController
   resource_controller
   
   create.wants.html {redirect_to collection_path}
