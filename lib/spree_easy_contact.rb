@@ -1,6 +1,5 @@
 require 'spree_core'
 require 'honeypot-captcha'
-require 'spree_easy_contact_hooks'
 
 module SpreeEasyContact
   class Engine < Rails::Engine
@@ -10,6 +9,10 @@ module SpreeEasyContact
     def self.activate
       Dir.glob(File.join(File.dirname(__FILE__), "../app/**/*_decorator*.rb")) do |c|
         Rails.env.production? ? require(c) : load(c)
+      end
+
+      Dir.glob(File.join(File.dirname(__FILE__), "../app/overrides/**/*.rb")) do |c|
+        Rails.application.config.cache_classes ? require(c) : load(c)
       end
     end
 

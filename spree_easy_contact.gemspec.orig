@@ -1,7 +1,11 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_easy_contact'
+<<<<<<< HEAD
   s.version     = '1.0.5'
+=======
+  s.version     = '1.0.4'
+>>>>>>> 8cf85765d423d25d5bc25ff695b472ed8932f9cf
   s.summary     = 'Add gem summary here'
   #s.description = 'Add (optional) gem description here'
   s.required_ruby_version = '>= 1.8.7'
