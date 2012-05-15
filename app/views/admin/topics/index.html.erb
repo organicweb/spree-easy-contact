@@ -1,7 +1,7 @@
 <div class="toolbar">
   <ul class="actions">
     <li id="new_topic_link">
-      <%= button_link_to t("new_topic"), new_object_url, {:remote => true, :icon => "add"} %>
+      <%= button_link_to t("new_topic"), new_object_url, {:icon => "add"} %>
     </li>
   </ul>
   <br class="clear" />
@@ -21,7 +21,7 @@
     </th>
   </tr>
   <% @topics.each do |topic| %>
-  <tr id="dom_id topic">
+  <tr id="<%= dom_id topic %>">
     <%- locals = {:topic => topic} %>
     <%= hook :admin_topics_index_rows, locals do %>
     <td><%= topic.name %></td>

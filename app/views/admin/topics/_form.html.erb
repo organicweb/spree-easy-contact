@@ -1,6 +1,6 @@
 <%- locals = {:f => f} %>
 
-<%= render "shared/error_messages", :target => f.object %>
+<%= render "spree/shared/error_messages", :target => f.object %>
 
 <%= hook :admin_topic_form, locals do %>
 
