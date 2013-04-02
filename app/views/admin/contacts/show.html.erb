@@ -2,7 +2,6 @@
 
 <%= render :partial => 'admin/shared/contact_tabs', :locals => {:current => "Contact Details"} %>
 
-<%= hook :admin_contact_show do %>
 <div class="adr">
   <h4><%= t("name_and_mail") %></h4>
   <p>
@@ -30,4 +29,3 @@
     <%= @contact.message %>
   </p>
 </div>
-<% end %>

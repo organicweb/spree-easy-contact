@@ -1,6 +1,5 @@
 <% content_for :sidebar do %>
   <ul class="sidebar">
-  <%= hook :admin_contact_tabs do %>
     <li<%== ' class="active"' if current == 'Contact List' %>>
       <%= link_to t("contact_list"), collection_url() %>
     </li>
@@ -10,6 +9,5 @@
     <li<%== ' class="active"' if current == 'ContactResend' %>>
       <%= link_to t("resend"), "#" %>
     </li>
-  <% end %>
   </ul>
 <% end %>
