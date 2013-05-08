@@ -1,5 +1,4 @@
 require 'spree_core'
-require 'honeypot-captcha'
 
 module SpreeEasyContact
   class Engine < Rails::Engine
