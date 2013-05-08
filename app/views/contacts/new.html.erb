@@ -23,9 +23,7 @@
       <%= f.label :message, t("message") %><br />
       <%= f.text_area :message %>
     </div>
-    <div class="field">
-      <%= recaptcha_tags %>
-    </div>
+    
     <div class="action"><%= f.submit t("send_message"), :class => "button primary" %></div>
   <% end %>
 </div>
