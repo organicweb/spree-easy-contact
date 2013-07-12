@@ -18,7 +18,7 @@
       <%= hook :admin_contact_index_rows, locals do %>
         <td><%= contact.name %></td>
         <td><%= contact.email %></td>
-        <td><%= contact.topic.name %></td>
+        <td><%= contact.try(:topic).try(:name) %></td>
         <td><%= contact.created_at %></td>
       <% end %>
       <td class="actions">
