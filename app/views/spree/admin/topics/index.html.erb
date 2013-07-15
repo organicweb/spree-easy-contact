@@ -1,0 +1,44 @@
+<% content_for :page_title do %>
+	<%= t("spree.topics.index.title") %>
+<% end %>
+
+<% content_for :page_actions do %>
+	<li><%= button_link_to t(:back_to_contacts_list), admin_contacts_url, :icon => 'icon-arrow-left' %></li>
+  <li id="new_topic_link">
+    <%= button_link_to t(:new_topic), new_object_url, { :remote => true, :icon => 'icon-plus', :id => 'admin_new_topic' } %>
+  </li>
+<% end %>
+
+<div id="new_topic" data-hook></div>
+
+<% if @collection.any? %>
+	<table class="index">
+		<colgroup>
+			<col style="40%" />
+			<col style="40%" />
+			<col style="10%" />
+		</colgroup>
+		<thead>
+			<tr>
+				<th><%= t(".title") %></th>
+				<th><%= t(".email") %></th>
+				<th class="actions"></th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @collection.each do |topic| %>
+			<tr class="<%= cycle('odd', 'even') %>" id="dom_id contact">
+				<td><%= topic.title %></td>
+				<td><%= topic.email %></td>
+				<td class="actions">
+					<%= link_to_edit topic, :no_text => true %>
+					&nbsp;
+					<%= link_to_delete topic, :no_text => true %>
+				</td>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
+<% else %>
+	<div class="no-object-found"><%= t(:no_results) %></div>
+<% end %>

@@ -1,0 +1,50 @@
+<% @body_id = 'spree_easy_contact' %>
+<% content_for :sidebar do %>
+  <% if "products" == @current_controller && @taxon %>
+    <%= render :partial => "spree/shared/filters" %>
+  <% else %>
+    <%= render :partial => "spree/shared/taxonomies" %>
+  <% end %>
+<% end %>
+
+<%= render :partial => 'spree/shared/error_messages', :locals => { :target => @contact } %>
+
+<h1><%= t('.contact') %></h1>
+<%= form_for(@contact, :html => {}) do |f| %>
+  <%# if SpreeContactUs.require_name %>
+    <p>
+      <%= f.label :name, t('.name') %>
+      <span class="required">*</span><br/>
+      <%= f.text_field :name, class: 'required' %>
+    </p>
+  <%# end %>
+  <p>
+    <%= f.label :email, t(".email") %>
+    <span class="required">*</span><br/>
+    <%= f.email_field :email, class: 'required email' %>
+  </p>
+	<p>
+		<%= f.label :topic_id, t(".topic") %>
+		<span class="required">*</span><br />
+		<%= f.collection_select :topic_id, Spree::Topic.all, :id, :title,{:include_blank => true}, class: 'required' %>
+	</p>
+	<p>
+		<%= f.label :order_number, t(".order_number") %>
+		<br />
+		<%= f.text_field :order_number %>
+	</p>
+  <p>
+    <%= f.label :message, t(".message") %>
+    <span class="required">*</span><br/>
+    <%= f.text_area :message, class: 'required' %>
+  </p>
+	<p id="a_comment_body_hp">
+		<style type="text/css" scoped="scoped" media="screen">
+		#a_comment_body_hp {display: none;}
+		</style>
+		<input name="easy_honey" values="" />
+	</p>
+  <p>
+    <%= f.submit t('.submit'), :alt => t('.submit'), :id => 'contact_us_contact_submit', :title => t('.submit') %>
+  </p>
+<% end %>

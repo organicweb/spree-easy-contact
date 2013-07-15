@@ -1,0 +1,59 @@
+fr:
+  back_to_contacts_list: Retour à la liste des contacts
+  new_topic: Ajouter un sujet
+  go_to_topics_list: Aller à la liste des sujets
+  spree:
+    topics:
+      index:
+        title: Liste des sujets
+    contacts:
+      index:
+        title: Liste des demandes de contacts
+      new:
+        contact: Contactez-nous
+        name: "Nom & prénom"
+        email: Courriel
+        topic: Sujet
+        order_number: Numéro de commande
+        message: Message
+        sent: Envoyé le
+        submit: Envoyer
+    admin:
+      contacts:
+        index:
+          name: "Nom & prénom"
+          email: Courriel
+          topic: Sujet
+          order_number: Numéro de commande
+          message: Message
+          sent: Envoyé le
+        show:
+          name: "Nom & prénom"
+          email: Courriel
+          topic: Sujet
+          order_number: Numéro de commande
+          message: Message
+          sent: Envoyé le
+      topics:
+        index:
+          title: Titre
+          email: Courriel
+        new:
+          new_topic: Ajouter un sujet
+          title: Titre
+          email: Courriel
+        show:
+          title: Titre
+          email: Courriel
+  activerecord:
+    attributes:
+      spree/contact:
+        name: "Nom & prénom"
+        email: Courriel
+        topic: Sujet
+        order_number: Numéro de commande
+        message: Message
+        sent: Envoyé le
+      spree/topic:
+        title: Titre
+        email: Courriel

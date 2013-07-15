@@ -1,0 +1,44 @@
+<% content_for :page_title do %>
+	<%= t("spree.contacts.index.title") %>
+<% end %>
+
+<% content_for :page_actions do %>
+	<li><%= button_link_to t(:go_to_topics_list), admin_topics_url, :icon => 'icon-arrow-right' %></li>
+  <li id="new_topic_link">
+    <%= button_link_to t(:new_topic), new_object_url, { :remote => true, :icon => 'icon-plus', :id => 'admin_new_topic' } %>
+  </li>
+<% end %>
+
+<table class="index">
+	<colgroup>
+		<col style="23%" />
+		<col style="23%" />
+		<col style="23%" />
+		<col style="23%" />
+		<col style="10%" />
+	</colgroup>
+	<thead>
+		<tr>
+			<th><%= t(".name") %></th>
+			<th><%= t(".email") %></th>
+			<th><%= t(".topic") %></th>
+			<th><%= t(".sent") %></th>
+			<th class="actions"></th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @collection.each do |contact| %>
+		<tr class="<%= cycle('odd', 'even') %>" id="dom_id contact">
+			<td><%= contact.name %></td>
+			<td><%= contact.email %></td>
+			<td><%= contact.try(:topic).try(:title) %></td>
+			<td><%= l contact.created_at %></td>
+			<td class="actions">
+				<%= link_to_show contact, :no_text => true %>
+				&nbsp;
+				<%= link_to_delete contact, :no_text => true %>
+			</td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>

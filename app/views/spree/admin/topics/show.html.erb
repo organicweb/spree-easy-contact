@@ -1,0 +1,19 @@
+<% content_for :sidebar_title do %>
+	<%= t(:topic_action) %>
+<% end %>
+<% content_for :sidebar do %>
+	<nav class="menu">
+		<ul class="sidebar">
+			<li>
+				<%= link_to_with_icon 'icon-list', t("topic_list"), collection_url() %>
+			</li>
+			<li><%= link_to_show @topic %></li>
+    	<li><%= link_to_resend @topic %></li>
+		</ul>
+	</nav>
+	
+<% end %>
+
+<h3><%= @topic.title %></h3>
+<p><strong><%= t(:title) %>&nbsp;:&nbsp;</strong><%= @topic.name %></p>
+<p><strong><%= t(:email) %>&nbsp;:&nbsp;</strong><%= @topic.email %></p>

@@ -1,0 +1,27 @@
+<% content_for :sidebar_title do %>
+	<%= t(:contact_action) %>
+<% end %>
+
+<% content_for :page_actions do %>
+	<li><%= button_link_to t(:back_to_contacts_list), admin_contacts_url, :icon => 'icon-arrow-left' %></li>
+	<li><%= button_link_to t(:go_to_topics_list), admin_topics_url, :icon => 'icon-arrow-right' %></li>
+  <li id="new_topic_link">
+    <%= button_link_to t(:new_topic), new_object_url, { :remote => true, :icon => 'icon-plus', :id => 'admin_new_topic' } %>
+  </li>
+<% end %>
+
+<% content_for :sidebar do %>
+	<nav class="menu">
+		<ul class="">
+    	<li><%# link_to_resend @contact %></li>
+		</ul>
+	</nav>
+	
+<% end %>
+
+<h3>Contact <%= t(".sent") %> <%= l @contact.created_at %></h3>
+<p><strong><%= t(".name") %>&nbsp;:&nbsp;</strong><%= @contact.name %></p>
+<p><strong><%= t(".email") %>&nbsp;:&nbsp;</strong><%= @contact.email %></p>
+<p><strong><%= t(".topic") %>&nbsp;:&nbsp;</strong><%= @contact.try(:topic).try(:title) %></p>
+<p><strong><%= t(".order_number") %>&nbsp;:&nbsp;</strong><%= @contact.try(:order_number) %></p>
+<p><strong><%= t(".message") %>&nbsp;:&nbsp;</strong><%= @contact.message %></p>

@@ -1,0 +1,6 @@
+$("#new_topic").html('<%= escape_javascript(render :template => "spree/admin/topics/new", :formats => [:html], :handlers => [:erb]) %>');
+<% unless Rails.env.test? %>
+  $('.select2').select2();
+<% end %>
+$("#table-filter").hide();
+$("#admin_new_topic").parent().hide();

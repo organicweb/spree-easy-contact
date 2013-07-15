@@ -1,0 +1,30 @@
+<%= render :partial => 'spree/admin/shared/contact_sub_menu' %>
+
+<%= render :partial => 'spree/shared/error_messages', :locals => { :target => @topic } %>
+
+<%= form_for [:admin, @topic] do |f| %>
+
+<fieldset data-hook="new_topic">
+
+  <legend align="center"><%= t(".new_topic") %></legend>
+	
+	<div class="four columns">
+		<%= f.field_container :title do %>
+			<%= f.label :title, t(".title") %><br />
+			<%= f.text_field :title %>
+		<% end %>
+	</div>
+	
+	<div class="four columns">
+		<%= f.field_container :email do %>
+			<%= f.label :email, t(".email") %><br />
+			<%= f.text_field :email %>
+		<% end %>
+	</div>
+	
+	<div class="clear"></div>
+
+  <%= render :partial => 'spree/admin/shared/new_resource_links' %>
+  
+</fieldset>
+<% end %>
