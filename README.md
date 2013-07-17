@@ -1,21 +1,30 @@
 SpreeEasyContact
 ================
 
-Introduction goes here.
+Easy to implement contact form with honeypot-captcha, with a topic selection management in admin.
+It stores all messages in DB for an easy recall of messages.
+
+This extension is based on joshnuss spree-contact-form (thank you BTW) : https://github.com/joshnuss/spree-contact-form
+
+Installation
+============
+
+Put the following line into your gemfile : 
+
+gem 'spree_easy_contact'
+
+Then run all the following command : 
+
+bundle install
+
+rails g  spree_easy_contact:install
+
+Set properly the mail method in the admin area (/admin/mail_methods)
+
+Add some topics
+
+And you're done !
+=================
 
 
-Example
-=======
-
-Example goes here.
-
-Testing
--------
-
-Be sure to bundle your dependencies and then create a dummy test app for the specs to run against.
-
-    $ bundle
-    $ bundle exec rake test_app
-    $ bundle exec rspec spec
-
-Copyright (c) 2013 [name of extension creator], released under the New BSD License
+Copyright (c) 2011 [Mathias Standaert for Organic Web], released under the New BSD License
