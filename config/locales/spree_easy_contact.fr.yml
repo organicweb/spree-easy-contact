@@ -7,6 +7,8 @@ fr:
       index:
         title: Liste des sujets
     contacts:
+      notices:
+        success: Votre message a bien été envoyé !
       index:
         title: Liste des demandes de contacts
       new:
