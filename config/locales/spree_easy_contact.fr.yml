@@ -20,6 +20,17 @@ fr:
         message: Message
         sent: Envoyé le
         submit: Envoyer
+    contact_mailer:
+      notification:
+        inquiry_has_been_received: Une demande vient d'être envoyé
+      details:
+        from: De
+        inquiry_type: Type de demande
+        message: Message
+        order_number: Numéro de commande
+      confirmation:
+        your_message_has_been_sent: Votre messaege a bien été envoyé !
+        thank_you: Merci
     admin:
       contacts:
         index:

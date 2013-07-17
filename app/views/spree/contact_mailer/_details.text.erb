@@ -1,0 +1,11 @@
+========================================
+<%= "#{t('.from')} : #{@contact.name} (#{@contact.email})" %>
+<%= "#{t('.inquiry_type')} : #{@contact.topic.title}" %>
+<% unless @contact.order_number.blank? %>
+<%= "#{t('.order_number')} : #{@contact.order_number}" %>
+<% end %>
+
+<%= t('.message') %>: 
+========================================
+<%= @contact.message %>
+========================================
