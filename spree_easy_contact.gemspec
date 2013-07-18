@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_easy_contact'
-  s.version     = '1.3.2'
+  s.version     = '1.3.2.1'
   s.summary     = 'Simple contact from manager for Spree'
   s.description = 'Simple contact from manager for Spree'
   s.required_ruby_version = '>= 1.8.7'
