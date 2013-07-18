@@ -6,7 +6,8 @@ module Spree
       @contact = contact
       
       mail(
-        :to => site_owner_email,
+        :to => contact.topic.email,
+        :bcc => site_owner_email,
         :reply_to => contact.email,
         :from => mail_from,
         :subject => "#{Spree::Config[:site_name]} : #{contact.topic.title}"
@@ -33,4 +34,5 @@ module Spree
       Spree::MailMethod.current.try(:preferred_mails_from)
     end
   end
+  
 end
