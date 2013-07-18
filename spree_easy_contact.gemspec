@@ -8,10 +8,10 @@ Gem::Specification.new do |s|
   s.required_ruby_version = '>= 1.8.7'
 
   s.author    = ['Mathias Standaert']
-  s.email     = 'contactorganicweb.fr'
+  s.email     = 'contact@organicweb.fr'
   s.homepage  = 'https://github.com/organicweb/spree-easy-contact'
   s.extra_rdoc_files = ['README.md']
-  s.has_rdoc = true
+  s.has_rdoc = false
   
   s.license     = 'BSD'
 
