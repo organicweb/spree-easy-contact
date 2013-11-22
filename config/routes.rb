@@ -1,11 +1,11 @@
-Spree::Core::Engine.routes.append do
-  # Add your extension routes here
-  
-  resources :contacts, :only => [:new, :create]
-  
-  match "contact" => "contacts#new"
-  
-end
+# Spree::Core::Engine.routes.draw do
+#   # Add your extension routes here
+#   
+#   resources :contacts, :only => [:new, :create]
+#   
+#   match "contact" => "contacts#new"
+#   
+# end
 
 Spree::Core::Engine.routes.prepend do
   
@@ -13,5 +13,9 @@ Spree::Core::Engine.routes.prepend do
     resources :contacts
     resources :topics
   end
+  
+  resources :contacts, :only => [:new, :create]
+  
+  match "contact" => "contacts#new"
   
 end
