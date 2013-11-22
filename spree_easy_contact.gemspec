@@ -2,9 +2,9 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_easy_contact'
-  s.version     = '1.3.3'
-  s.summary     = 'Simple contact from manager for Spree'
-  s.description = 'Simple contact from manager for Spree'
+  s.version     = '1.3.3.1'
+  s.summary     = 'Simple contact form manager for Spree'
+  s.description = 'Simple contact form manager for Spree'
   s.required_ruby_version = '>= 1.8.7'
 
   s.author    = ['Mathias Standaert']
