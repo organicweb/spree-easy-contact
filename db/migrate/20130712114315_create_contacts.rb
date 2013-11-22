@@ -5,10 +5,10 @@ class CreateContacts < ActiveRecord::Migration
       t.string :email
       t.string :order_number 
       t.text :message
-      t.references :spree_topic
+      t.references :topic
 
       t.timestamps
     end
-    add_index :spree_contacts, :spree_topic_id
+    add_index :spree_contacts, :topic_id
   end
 end
